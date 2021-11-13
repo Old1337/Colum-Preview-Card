@@ -1,0 +1,113 @@
+/* Start Global Rules */
+:root {
+  --orange-color: hsl(31, 77%, 52%);
+  --dark-cyan-color: hsl(184, 100%, 22%);
+  --very-dark-cyan-color: hsl(179, 100%, 13%);
+  --p-color: hsla(0, 0%, 100%, 0.75);
+  --the-rest-color: hsl(0, 0%, 95%);
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+@media (max-width: 767px) {
+  body {
+    height: 250vh;
+  }
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.box {
+  padding: 100px 55px;
+}
+.box.orange {
+  background-color: var(--orange-color);
+  border-radius: 10px 0px 0px 10px;
+}
+@media (max-width: 767px) {
+  .box.orange {
+    border-radius: 10px 10px 0px 0px;
+  }
+}
+.box.dark {
+  background-color: var(--dark-cyan-color);
+}
+.box.verydark {
+  background-color: var(--very-dark-cyan-color);
+  border-radius: 0px 10px 10px 0px;
+}
+@media (max-width: 767px) {
+  .box.verydark {
+    border-radius: 0px 0px 10px 10px;
+  }
+}
+h1 {
+  color: var(--the-rest-color);
+}
+p {
+  color: var(--p-color);
+  width: 80%;
+  line-height: 1.6;
+  padding: 20px 0px;
+  margin-bottom: 100px;
+}
+
+a {
+  color: var(--the-rest-color);
+  border: var(--the-rest-color) 2px solid;
+  padding: 15px 35px;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+.orange a:hover {
+  background-color: var(--the-rest-color);
+  color: var(--orange-color);
+}
+.dark a:hover {
+  background-color: var(--the-rest-color);
+  color: var(--dark-cyan-color);
+}
+.verydark a:hover {
+  background-color: var(--the-rest-color);
+  color: var(--very-dark-cyan-color);
+}
